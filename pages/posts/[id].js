@@ -8,10 +8,10 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData ? postData.title : '--'}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1 className={utilStyles.headingXl}>{postData ? postData.title : '--'}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
