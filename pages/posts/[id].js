@@ -13,7 +13,7 @@ export default function Post({ postData }) {
       <article>
         <h1 className={utilStyles.headingXl}>{postData ? postData.title : '--'}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData ? postData.date : null} />
+          <Date dateString={postData ? postData.date : '2020-01-01'} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData ? postData.contentHtml : null }} />
       </article>
